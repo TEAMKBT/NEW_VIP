@@ -1,0 +1,83 @@
+/* General Body Style */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a0a; /* Dark background for hacker vibe */
+    color: #eaeaea;
+    text-align: center;
+    margin-top: 50px;
+    font-variant: small-caps; /* Apply small caps to all text */
+    background-image: url('your-background-image.jpg'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Button Styles */
+.button {
+    background-color: #440a8f; /* Violet */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 200px; /* Set width for consistency */
+    box-shadow: 0 4px 10px rgba(0, 0, 255, 0.3); /* Violet shadow */
+}
+
+.button:hover {
+    background-color: #bb66ff; /* Lighter violet on hover */
+    transform: scale(1.05); /* Button grows slightly on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 255, 0.6); /* Stronger shadow on hover */
+}
+
+/* Logo Styling */
+.logo {
+    width: 150px; /* Adjust size as necessary */
+    margin-bottom: 20px;
+    animation: fadeInSlideUp 1s ease-out; /* Animation for logo */
+}
+
+/* Animation for heading */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    animation: fadeInSlideUp 1s ease-out; /* Apply the animation */
+    font-size: 36px;
+    color: #bb66ff; /* Violet */
+    text-shadow: 0 0 10px #bb66ff, 0 0 20px #bb66ff; /* Glowing effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 20px; /* Add padding on small screens */
+    }
+
+    .button {
+        width: 100%; /* Make buttons take up full width on small screens */
+        padding: 12px 0; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Reduce font size on mobile */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller font size for the heading */
+    }
+
+    .logo {
+        width: 120px; /* Adjust logo size for mobile */
+    }
+}

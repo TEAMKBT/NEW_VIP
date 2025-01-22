@@ -1,0 +1,233 @@
+/* General Body Style */
+body {
+    font-family: 'Courier New', monospace;
+    background: url('your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-variant: small-caps;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #0a0a0a; /* Dark background for hacker vibe */
+    text-align: center; /* Center content horizontally */
+}
+
+/* Container with Animation */
+.prediction-container {
+    text-align: center;
+    position: relative;
+    top: 0;
+    width: 80%; /* Adjust width for centralizing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideIn 1s ease-out; /* Animation on load */
+    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.4); /* Violet shadow */
+}
+
+.prediction-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 0, 255, 0.6); /* Hover effect with stronger shadow */
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 32px;
+    color: #bb66ff; /* Violet for hacker theme */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #bb66ff, 0 0 20px #bb66ff; /* Glowing text effect */
+}
+
+/* Game Info */
+.game-info {
+    margin: 20px 0;
+    font-weight: bold;
+    color: #d1a6ff;
+    font-size: 18px;
+}
+
+/* Divider Style */
+.divider {
+    margin: 25px 0;
+    border-bottom: 1px solid #bb66ff;
+}
+
+/* Prediction Text */
+.prediction {
+    font-size: 22px;
+    color: #fff;
+    margin: 10px 0;
+    font-weight: bold;
+    text-shadow: 0 0 10px #bb66ff, 0 0 20px #bb66ff; /* Glowing effect */
+}
+
+.prediction span {
+    display: inline-block;
+    font-size: 24px;
+    color: #bb66ff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow buttons to wrap in case of smaller screen sizes */
+}
+
+/* Button Styles */
+button, .kwg-button, .telegram-button {
+    padding: 14px 36px;
+    border: none;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    background-color: #440a8f; /* Violet background */
+    box-shadow: 0 4px 10px rgba(0, 0, 255, 0.3);
+}
+
+.kwg-button {
+    background-color: #f24d57; /* Red button */
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+}
+
+.telegram-button {
+    background-color: #0088cc; /* Blue button */
+    box-shadow: 0 4px 10px rgba(0, 136, 204, 0.4);
+}
+
+/* Button Hover Effects */
+button:hover, .kwg-button:hover, .telegram-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 255, 0.6);
+}
+
+/* Timer Style */
+.timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4b4b6a;
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-out; /* Fade-in effect */
+}
+
+/* History Section */
+.history {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #bb66ff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 10px rgba(255, 0, 255, 0.4);
+}
+
+/* Animation for Prediction Container */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fade-in effect for Timer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsiveness */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .prediction-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller heading on mobile */
+    }
+
+    .game-info {
+        font-size: 16px;
+    }
+
+    .prediction {
+        font-size: 18px;
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px;
+    }
+
+    button, .kwg-button, .telegram-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    .timer {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .history {
+        font-size: 14px;
+        max-height: 150px; /* Reduce height for mobile */
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Even smaller heading on very small screens */
+    }
+
+    .prediction {
+        font-size: 16px;
+    }
+
+    button, .kwg-button, .telegram-button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .timer {
+        font-size: 14px;
+        padding: 4px 10px;
+    }
+
+    .history {
+        font-size: 12px;
+        max-height: 120px; /* Further reduce height on very small screens */
+    }
+}
